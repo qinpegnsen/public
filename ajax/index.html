@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./ajax.js"></script>
+</head>
+
+<body>
+<div>点击发送ajax请求</div>
+
+</body>
+
+<script>
+    let el=document.querySelector('div');
+    el.onclick=function(){
+        ajax({
+            url:'http://api2.zolerp.cn/api/User/Login',
+            method:"post",
+            /* 
+             想要啥格式就啥格式
+                字符串
+                对象
+                xml
+            */
+            // dataType:'json',//默认就是
+            // dataType:'text',
+            data:{userName:'qps',userPwd:'abc111'},
+            success:function(data){
+                console.log('data',data);
+                
+            }
+        })
+    }
+</script>
+
+</html>
