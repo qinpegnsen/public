@@ -1,0 +1,248 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;//修改了默认值
+}
+ul,
+ol,
+dl,
+li,
+dt,
+dd {
+	list-style: none;
+}
+img {
+	border: 0;
+}
+a {
+	text-decoration: none;
+}
+/* 这里要根据设计师的要求，更改默认字体，会依次从左往右选择电脑里面撞到字体,如果都没找到，在mac 是默认 pingfang sc
+	computed Rendered Fonts 可以看到
+*/
+body {
+	font-family: "行楷-简1", "娃娃体-简";
+}
+.fl {
+	float: left;
+}
+.fr {
+	float: right;
+}
+.fc {
+	clear: both;
+}
+.text-ellipsis {
+	text-overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+/* 
+  栅格
+  中屏 小屏<900 大屏>900
+*/
+/*小屏*/
+.col-s-1 {
+	width: 8.33333333333%;
+	float: left;
+}
+.col-s-2 {
+	width: 16.6666666%;
+	float: left;
+}
+.col-s-3 {
+	width: 24.9999999999%;
+	float: left;
+}
+.col-s-4 {
+	width: 33.222222222%;
+	float: left;
+}
+.col-s-5 {
+	width: 41.5555555%;
+	float: left;
+}
+.col-s-6 {
+	width: 49.8888888%;
+	float: left;
+}
+.col-s-7 {
+	width: 58.22222222%;
+	float: left;
+}
+.col-s-8 {
+	width: 66.55555555%;
+	float: left;
+}
+.col-s-9 {
+	width: 74.8888888%;
+	float: left;
+}
+.col-s-10 {
+	width: 83.11111111%;
+	float: left;
+}
+.col-s-11 {
+	width: 91.44444444444%;
+	float: left;
+}
+.col-s-12 {
+	width: 100%;
+	float: left;
+}
+.col-m-hide {
+	display: none;
+}
+.col-s-hide {
+	display: none;
+}
+/*中屏*/
+@media screen and (min-width: 900px) {
+	.col-s-hide {
+		display: block;
+	}
+	.col-m-hide {
+		display: none;
+	}
+	.col-m-1 {
+		width: 8.33333333333%;
+		float: left;
+	}
+	.col-m-2 {
+		width: 16.6666666%;
+		float: left;
+	}
+	.col-m-3 {
+		width: 24.9999999999%;
+		float: left;
+	}
+	.col-m-4 {
+		width: 33.222222222%;
+		float: left;
+	}
+	.col-m-5 {
+		width: 41.5555555%;
+		float: left;
+	}
+	.col-m-6 {
+		width: 49.8888888%;
+		float: left;
+	}
+	.col-m-7 {
+		width: 58.22222222%;
+		float: left;
+	}
+	.col-m-8 {
+		width: 66.55555555%;
+		float: left;
+	}
+	.col-m-9 {
+		width: 74.8888888%;
+		float: left;
+	}
+	.col-m-10 {
+		width: 83.11111111%;
+		float: left;
+	}
+	.col-m-11 {
+		width: 91.44444444444%;
+		float: left;
+	}
+	.col-m-12 {
+		width: 100%;
+		float: left;
+	}
+}
+/*大屏*/
+@media screen and (min-width: 1200px) {
+	.box {
+		width: 1200px;
+	}
+	.col-m-hide {
+		display: block;
+	}
+	.col-s-hide {
+		display: block;
+	}
+	.col-l-1 {
+		width: 8.33333333333%;
+		float: left;
+	}
+	.col-l-2 {
+		width: 16.6666666%;
+		float: left;
+	}
+	.col-l-3 {
+		width: 24.9999999999%;
+		float: left;
+	}
+	.col-l-4 {
+		width: 33.222222222%;
+		float: left;
+	}
+	.col-l-5 {
+		width: 41.5555555%;
+		float: left;
+	}
+	.col-l-6 {
+		width: 49.8888888%;
+		float: left;
+	}
+	.col-l-7 {
+		width: 58.22222222%;
+		float: left;
+	}
+	.col-l-8 {
+		width: 66.55555555%;
+		float: left;
+	}
+	.col-l-9 {
+		width: 74.8888888%;
+		float: left;
+	}
+	.col-l-10 {
+		width: 83.11111111%;
+		float: left;
+	}
+	.col-l-11 {
+		width: 91.44444444444%;
+		float: left;
+	}
+	.col-l-12 {
+		width: 100%;
+		float: left;
+	}
+}
+@for $i from 1 through 30 {
+	.p#{$i} {
+		padding: #{$i}px;
+	}
+	.pl#{$i} {
+		padding-left: #{$i}px;
+	}
+	.pr#{$i} {
+		padding-right: #{$i}px;
+	}
+	.pt#{$i} {
+		padding-right: #{$i}px;
+	}
+	.pb#{$i} {
+		padding-right: #{$i}px;
+	}
+	.m#{$i} {
+		margin: #{$i}px;
+	}
+	.mt#{$i} {
+		margin-top: #{$i}px;
+	}
+	.mb#{$i} {
+		margin-bottom: #{$i}px;
+	}
+	.ml#{$i} {
+		margin-left: #{$i}px;
+	}
+	.mr#{$i} {
+		margin-right: #{$i}px;
+	}
+}

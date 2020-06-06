@@ -1,14 +1,14 @@
 function ajax(options) {
     let opts = Object.assign({
-        url: "",
-        method: "get",
-        data: "",
+        url: "",//api地址
+        method: "get",//方法
+        data: "",//传递的数据
         dataType:"json",//返回的数据要什么格式的
         headers: {
             "content-type": "application/x-www-form-urlencoded",
         },
         success(res) { },
-        fail() { }
+        fail() {}
     }, options)
     let xhr = window.XMLHttpRequest ? new XMLHttpRequest() : new ActiveXObject("Microsoft.XMLHTTP");
 
